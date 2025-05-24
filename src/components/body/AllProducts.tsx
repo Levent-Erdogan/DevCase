@@ -10,7 +10,7 @@ const columns = [
     title: 'Product',
     dataIndex: 'name',
     key: 'name',
-    render: (_: any, record: any) => (
+     render: (_: string, record: Product) => (
       <div className="flex items-center gap-3">
         <img src={record.imageUrl} alt={record.name} className="w-10 h-10 rounded bg-gray-100 object-contain" />
         <div>
@@ -161,7 +161,7 @@ const AllProducts = () => {
       if (col.key === 'actions') {
         return {
           ...col,
-          render: (_: any, record: Product) => (
+         render: (_: undefined, record: Product) => (
             <Dropdown
               menu={{
                 items: [
