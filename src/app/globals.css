@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar for the sidebar */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px; /* Scrollbar genişliği */
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent; /* Track arka planı şeffaf */
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Başparmak rengi */
+  border-radius: 3px; /* Başparmak köşeleri */
+}
+
+.custom-submenu > .ant-menu-submenu-title {
+  background-color: #6c63ff !important; /* Mor arka plan */
+  color: #fff !important; /* Yazı rengi beyaz */
+}
+
+.custom-submenu > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+  color: #fff !important; /* Ok rengi beyaz */
+}
+
+.custom-menu-item.ant-menu-item-selected {
+  color: #6c63ff !important; /* Seçili öğe yazı rengi mor */
+  background-color: transparent !important; /* Arka plan şeffaf */
+}
+
+/* Styles for Product List Table */
+.ant-table-wrapper .ant-table {
+  border: none !important; /* Tablo borderını kaldır */
+}
+
+.ant-table-wrapper .ant-table-container {
+  border: none !important;
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th {
+  background-color: transparent !important; /* Başlık arka planını şeffaf yap */
+  border-bottom: 1px solid #f0f0f0; /* Başlık altına çizgi ekle */
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #f0f0f0; /* Satır altına çizgi ekle */
+}
+
+.ant-table-wrapper .ant-table-tbody > tr:last-child > td {
+  border-bottom: none; /* Son satırın alt çizgisini kaldır */
+}
+
+.ant-table-wrapper .ant-table-tbody > tr.ant-table-row:hover > td {
+  background-color: #f5f5f5; /* Satır üzerine gelindiğinde arka plan rengi */
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td, .ant-table-wrapper .ant-table-thead > tr > th {
+  padding: 12px 16px; /* Padding değerlerini ayarla */
+}
+
+.ant-table-wrapper .ant-table-selection-column {
+  padding: 0 !important; /* Seçim sütunu paddingini kaldır */
+}
+
+.ant-table-wrapper .ant-table-selection-column .ant-checkbox-wrapper {
+  margin-left: 16px; /* Onay kutusuna sol margin ekle */
+}
